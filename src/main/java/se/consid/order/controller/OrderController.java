@@ -18,7 +18,7 @@ public class OrderController {
     public Mono<String> createReceipt() {
         return webClientBuilder.build()
                 .get()
-                .uri("http://receipt-service/receipts")
+                .uri("http://receipt-service/receipt")
                 .retrieve()
                 .bodyToMono(String.class);
     }
@@ -27,7 +27,7 @@ public class OrderController {
     public Mono<String> createPayment() {
         return webClientBuilder.build()
                 .get()
-                .uri("http://payment-service/receipts")
+                .uri("http://payment-service/paymen")
                 .retrieve()
                 .bodyToMono(String.class);
     }
